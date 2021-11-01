@@ -181,7 +181,11 @@ input:checked {
     background-color: var(--calc-background);
     border-radius: 10px;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
+	width: 100%;
+	align-content: center;
+	justify-content: center;
+	margin: auto 0;
 }
 
 .button {
@@ -249,6 +253,7 @@ input:checked {
     #buttons {
         gap: 1.5rem;
         grid-template-columns: repeat(4, 1fr);
+		padding: 1.5rem;
     }
 
     .button {
