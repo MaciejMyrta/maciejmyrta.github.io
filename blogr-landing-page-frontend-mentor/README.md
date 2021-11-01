@@ -26,4 +26,9 @@ This challenge helped a lot to deep dive into aspects of creating intuitive and 
 CSS section contained some basic or intermediate stuff, but it was important to take care of many details working together to provide the modern design in all possible display breakpoints.
 It was good practice for understanding the position properties with placing the various elements or images as absolute elements or as a backgrounds mixed up with gradient colors being the ground for the containers.
 
+### Setbacks which can be improved:
+
+- Hover action on buttons is not working well on mobile phone device despite correct behavior on desktop in both breakpoints.
+- Arrangement of CSS file could be wiser with less chaotic approach. Properties could be better aggregated with finding more common elements which could be grouped into HTML classes more than div IDs.
+
 
