@@ -64,10 +64,10 @@ header {
 .nav-list {
     display: none;
     background-color: rgb(240, 240, 240);
-    width: 78%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 2.5rem;
-    padding: 1.8rem;
+    padding: 1.8rem 0;
     border-radius: 6px;
 }
 
