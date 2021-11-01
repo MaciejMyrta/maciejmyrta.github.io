@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.theme-blue {
+    --main-background: hsl(222, 26%, 31%);
+    --header-font-color: white;
+    --slider-and-input-background: hsl(224, 36%, 15%);
+    --calc-background: hsl(223, 31%, 20%);
+    --button-font-color: hsl(221, 14%, 31%);
+    --button-background: hsl(30, 25%, 89%);
+    --button-shadow: 0px 4px hsl(28, 16%, 65%);
+    --button-hover: hsl(0, 0%, 100%);
+    --resdel-font-color: hsl(0, 0%, 100%);
+    --resdel-background: hsl(225, 21%, 49%);
+    --resdel-shadow: hsl(224, 28%, 35%);
+    --resdel-hover: hsl(223, 41%, 61%);
+    --equal-font-color: hsl(0, 0%, 100%);
+    --equal-background: hsl(6, 63%, 50%);
+    --equal-shadow: 0px 4px hsl(6, 70%, 34%);
+    --equal-hover: hsl(6, 91%, 58%);
+    --attribution-font-color: hsl(30, 25%, 89%);
+    --attribution-link-color:hsl(30, 25%, 89%);
+}
+
+.theme-grey {
+    --main-background: hsl(0, 0%, 90%);
+    --header-font-color: hsl(60, 10%, 19%);
+    --slider-and-input-background: hsl(0, 0%, 93%);
+    --calc-background: hsl(0, 5%, 81%);;
+    --button-font-color: hsl(221, 14%, 31%);
+    --button-background: hsl(45, 7%, 89%);
+    --button-shadow: 0px 4px hsl(35, 11%, 61%);
+    --button-hover: hsl(0, 0%, 100%);
+    --resdel-font-color: hsl(0, 0%, 100%);
+    --resdel-background: hsl(185, 42%, 37%);
+    --resdel-shadow: 0px 4px hsl(185, 58%, 25%);
+    --resdel-hover: hsl(185, 44%, 47%);
+    --equal-font-color: hsl(0, 0%, 100%);
+    --equal-background: hsl(25, 98%, 40%);
+    --equal-shadow: 0px 4px hsl(25, 99%, 27%);
+    --equal-hover: hsl(25, 99%, 45%);
+    --attribution-font-color: hsl(221, 14%, 31%);
+    --attribution-link-color:hsl(185, 42%, 37%);
+}
+
+.theme-violet {
+    --main-background: hsl(268, 75%, 9%);
+    --header-font-color: hsl(52, 100%, 62%);
+    --slider-and-input-background: hsl(268, 71%, 12%);
+    --calc-background: hsl(268, 71%, 12%);
+    --button-font-color: hsl(52, 100%, 62%);
+    --button-background: hsl(268, 47%, 21%);
+    --button-shadow: 0px 4px hsl(290, 70%, 36%);
+    --button-hover: hsl(268, 47%, 33%);
+    --resdel-font-color: hsl(0, 0%, 100%);
+    --resdel-background: hsl(281, 89%, 26%);
+    --resdel-shadow: 0px 4px hsl(285, 91%, 52%);
+    --resdel-hover: hsl(281, 89%, 33%);
+    --equal-font-color: hsl(198, 20%, 13%);
+    --equal-background: hsl(176, 100%, 44%);
+    --equal-shadow: 0px 4px hsl(177, 92%, 70%);
+    --equal-hover: hsl(176, 99%, 49%);
+    --attribution-font-color: hsl(30, 25%, 89%);
+    --attribution-link-color: hsl(52, 100%, 62%);
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--main-background);
+    --divide-warn: 12px;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    max-width: 350px;
+    padding: 8rem 0 2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--header-font-color);
+    align-items: center;
+    font-size: 28px;
+    height: 60px;
+}
+
+#theme-box {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+#theme-switch {
+    width: 70px;
+}
+
+#theme-numbers {
+    display: flex;
+    justify-content: space-around;
+}
+
+#theme-slider {
+    background-color: var(--calc-background);
+    height: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+input:checked {
+    background: var(--equal-background);
+}
+
+#input-display {
+    min-height: 120px;
+    background-color: var(--slider-and-input-background);
+    border-radius: 12px;
+    color: var(--header-font-color);
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#expression {
+    word-break: break-all;
+}
+
+#result {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+#result-desc {
+    font-size: 20px;
+    align-self: flex-end;
+    display: flex;
+    margin-bottom: 4px;
+    color: var(--slider-and-input-background);
+    margin-right: 1em;
+}
+
+#result-count {
+    font-size: 32px;
+    word-break: break-all;
+}
+
+#buttons {
+    display: grid;
+    grid-template-areas: 
+    "seven five nine del"
+    "four eight six plus"
+    "one two three minus"
+    "dot zero slash x"
+    "reset reset equal equal";
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: var(--calc-background);
+    border-radius: 10px;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.button {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--button-font-color);
+    background-color: var(--button-background);
+    box-shadow: var(--button-shadow);
+    border-radius: 6px;
+    font-size: 22px;
+    }
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+.resdel {
+    background-color: var(--resdel-background);
+    box-shadow: var(--resdel-shadow);
+    color: var(--resdel-font-color);
+    font-size: 16px;
+    }
+
+.resdel:hover {
+    background-color: var(--resdel-hover);
+}
+
+#reset {
+    grid-area: reset;
+}
+
+#equal {
+    grid-area: equal;
+    background-color: var(--equal-background);
+    box-shadow: var(--equal-shadow);
+    color: var(--equal-font-color);
+}
+
+#equal:hover {
+    background-color: var(--equal-hover);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--attribution-font-color); 
+}
+
+.attribution a { 
+    color: var(--attribution-link-color); 
+}
+
+@media (min-width: 768px) {
+
+    body {
+        --divide-warn: 16px;
+    }
+
+    main {
+        max-width: 500px;
+    }
+
+    #buttons {
+        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .resdel {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    body {
+        --divide-warn: 20px;
+    }
+    
+    main {
+        max-width: 600px;
+    }
+}

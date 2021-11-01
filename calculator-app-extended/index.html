@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body class="theme-blue">
+  <main>
+    <header>
+      <h3>calc</h3>
+      <div id="theme-box">
+        <p>THEME</p>
+        <div id="theme-switch">
+          <div id="theme-numbers">
+            <label for="theme-1">1</label>
+            <label for="theme-2">2</label>
+            <label for="theme-3">3</label>
+          </div>
+          <div id="theme-slider">
+            <input type="radio" id="theme-1" name="theme" value="blue" checked>
+            <input type="radio" id="theme-2" name="theme" value="grey">
+            <input type="radio" id="theme-3" name="theme" value="violet">
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="input-display">
+      <div id="expression">
+        <p></p>
+      </div>
+      <div id="result">
+        <div id="result-desc">
+          <h3>result: </h3>
+        </div>
+        <div id="result-count"><h3>0</h3></div>
+        
+      </div>
+    </section>
+    <section id="buttons">
+      <div class="button digit" id="seven"><h3>7</h3></div>
+      <div class="button digit" id="eight"><h3>8</h3></div>
+      <div class="button digit" id="nine"><h3>9</h3></div>
+      <div class="button resdel" id="del"><h3>DEL</h3></div>
+      <div class="button digit" id="four"><h3>4</h3></div>
+      <div class="button digit" id="five"><h3>5</h3></div>
+      <div class="button digit" id="six"><h3>6</h3></div>
+      <div class="button maths" id="plus"><h3>+</h3></div>
+      <div class="button digit" id="one"><h3>1</h3></div>
+      <div class="button digit" id="two"><h3>2</h3></div>
+      <div class="button digit" id="three"><h3>3</h3></div>
+      <div class="button maths" id="minus"><h3>-</h3></div>
+      <div class="button" id="dot"><h3>.</h3></div>
+      <div class="button digit" id="zero"><h3>0</h3></div>
+      <div class="button maths" id="slash"><h3>/</h3></div>
+      <div class="button maths" id="x"><h3>x</h3></div>
+      <div class="button resdel" id="reset"><h3>RESET</h3></div>
+      <div class="button" id="equal"><h3>=</h3></div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/maciej-myrta-973a5819a/">Maciej Myrta</a>.
+  </div>
+</body>
+<script src="file.js"></script>
+</html>
