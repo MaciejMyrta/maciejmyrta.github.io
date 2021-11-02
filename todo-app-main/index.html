@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+
+<body class="theme-dark">
+  <header>
+    <div class="header-content">
+      <h1 id="header-title">TODO</h1>
+      <button class="btn-theme"></button>
+      <div class="todo-line" id="todo-input">
+        <input type="text" placeholder="Create a new todo...">
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="todo-tower">
+      <div class="todo-line" id="tasks-empty">Your tasks list is empty!</div>
+    </section>
+    <div class="todo-line" id="todo-status">
+      <p id="tasks-pending"><span id="count">0</span> items left</p>
+      <p id="clear-completed">Clear Completed</p>
+    </div>
+    <div class="todo-line" id="todo-options">
+      <button class="btn-options active" id="btn-all">All</button>
+      <button class="btn-options" id="btn-active">Active</button>
+      <button class="btn-options" id="btn-completed">Completed</button>
+    </div>
+    <div id="tip">Drag and drop to reorder list</div>
+  </main>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>

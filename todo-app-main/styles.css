@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.theme-dark {
+    --top-bg: url(images/bg-mobile-dark.jpg);
+    --body-bg: hsl(235, 21%, 11%);
+    --btn-image: url(images/icon-sun.svg);
+    --todo-bg: hsl(235, 24%, 19%);
+    --color-main: hsl(234, 11%, 52%);
+    --btn-active: hsl(220, 98%, 61%)
+}
+
+.theme-light {
+    --top-bg: url(images/bg-mobile-light.jpg);
+    --body-bg: hsl(236, 33%, 92%);;
+    --btn-image: url(images/icon-moon.svg);
+    --todo-bg: hsl(0, 0%, 98%);
+}
+
+body {
+    background-color: var(--body-bg);
+    background-image: var(--top-bg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header {
+    padding-top: 10%;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 85%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#header-title {
+    font-size: 26px;
+    color: white;
+    letter-spacing: 0.6rem;
+    align-self: center;
+}
+
+.btn-theme {
+    background: var(--btn-image) no-repeat center/contain;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#todo-input {
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+main {
+    height: auto;
+    min-height: 500px;
+    width: 85%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#todo-tower {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+input[type="text"] {
+    border: none;
+    background: var(--todo-bg);
+    color: var(--color-main);
+    width: 100%;
+    font-size: 16px;
+}
+
+input:active {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--color-main);
+}
+
+.todo-line {
+    position: relative;
+    height: 60px;
+    background-color: var(--todo-bg);
+    display: flex;
+    align-items: center;
+    color: var(--color-main);
+    transition-duration: 0.3s;
+}
+
+.complete-check {
+    appearance: none;
+    border: 1px solid var(--color-main);
+    border-radius: 50%;
+    outline: none;
+    transition-duration: 0.3s;
+    width: 25px;
+    height: 25px;
+    margin-right: 0.6rem;
+    cursor: pointer;
+}
+
+.complete-check:checked {
+    background-image: url(images/icon-check.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.delete-task {
+    position: absolute;
+    right: 20px;
+    background: url(images/icon-cross.svg) no-repeat center/contain;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#tasks-empty {
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.todo-task {
+    padding: 0 1rem;
+    border-bottom: 1px solid var(--color-main);
+}
+
+#todo-status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#todo-status > p {
+    font-size: 16px;
+}
+
+#count {
+    font-size: 16px;
+}
+
+#clear-completed {
+    cursor: pointer;
+}
+
+#todo-options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.btn-options {
+    color: var(--color-main);
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-options.active {
+    color: var(--btn-active);
+}
+
+#tip {
+    color: var(--color-main);
+    font-size: 14px;
+    margin: 75px auto 0;
+    text-align: center;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
