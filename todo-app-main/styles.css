@@ -7,24 +7,32 @@
 }
 
 .theme-dark {
-    --top-bg: url(images/bg-mobile-dark.jpg);
+    --top-bg-mobile: url(images/bg-mobile-dark.jpg);
+    --top-bg-desktop: url(images/bg-desktop-dark.jpg);
     --body-bg: hsl(235, 21%, 11%);
     --btn-image: url(images/icon-sun.svg);
     --todo-bg: hsl(235, 24%, 19%);
+    --color-task: hsl(234, 39%, 85%);
     --color-main: hsl(234, 11%, 52%);
-    --btn-active: hsl(220, 98%, 61%)
+    --border-color: hsl(233, 14%, 35%);
+    --btn-active: hsl(220, 98%, 61%);
 }
 
 .theme-light {
-    --top-bg: url(images/bg-mobile-light.jpg);
-    --body-bg: hsl(236, 33%, 92%);;
+    --top-bg-mobile: url(images/bg-mobile-light.jpg);
+    --top-bg-desktop: url(images/bg-desktop-light.jpg);
+    --body-bg: hsl(260, 11%, 95%);
     --btn-image: url(images/icon-moon.svg);
-    --todo-bg: hsl(0, 0%, 98%);
+    --todo-bg: rgb(255, 255, 255);
+    --color-task: hsl(235, 19%, 35%);
+    --color-main: hsl(236, 9%, 61%);
+    --border-color: hsl(236, 33%, 92%);
+    --btn-active: hsl(220, 98%, 61%);
 }
 
 body {
     background-color: var(--body-bg);
-    background-image: var(--top-bg);
+    background-image: var(--top-bg-mobile);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -77,7 +85,7 @@ main {
 
 #todo-tower {
     width: 100%;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -113,18 +121,23 @@ input:focus {
 
 .complete-check {
     appearance: none;
+    -webkit-appearance: none; 
+    -ms-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
     border: 1px solid var(--color-main);
     border-radius: 50%;
     outline: none;
     transition-duration: 0.3s;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     margin-right: 0.6rem;
     cursor: pointer;
 }
 
 .complete-check:checked {
-    background-image: url(images/icon-check.svg);
+    background: no-repeat url(images/icon-check.svg), 
+    linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -149,10 +162,19 @@ input:focus {
 
 .todo-task {
     padding: 0 1rem;
-    border-bottom: 1px solid var(--color-main);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--color-task);
 }
 
-#todo-status {
+.mobile-panel {
+    display: none;
+}
+
+.desktop-panel {
+    display: none;
+}
+
+.todo-status {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -160,24 +182,24 @@ input:focus {
     border-radius: 0px 0px 8px 8px;
 }
 
-#todo-status > p {
+.todo-status > p {
     font-size: 16px;
 }
 
-#count {
+.count {
     font-size: 16px;
 }
 
-#clear-completed {
+.clear-completed {
     cursor: pointer;
 }
 
-#todo-options {
+.todo-options {
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 20px;
     border-radius: 8px;
 }
 
@@ -186,7 +208,12 @@ input:focus {
     border: none;
     background: none;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+}
+
+.btn-options:hover {
+    color: white;
 }
 
 .btn-options.active {
@@ -195,7 +222,6 @@ input:focus {
 
 #tip {
     color: var(--color-main);
-    font-size: 14px;
     margin: 75px auto 0;
     text-align: center;
 }
@@ -207,4 +233,33 @@ input:focus {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-image: var(--top-bg-desktop);
+        background-size: 100% 350px;
+    }
+
+    header {
+        padding-top: 100px;
+    }
+
+    #header-title {
+        font-size: 36px;
+    }
+
+    #todo-input {
+        margin-top: 50px;
+    }
+
+    .header-content {
+        max-width: 700px;
+    }
+
+    main {
+        max-width: 700px;
+    }
+
 }
