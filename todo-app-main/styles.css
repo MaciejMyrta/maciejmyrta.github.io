@@ -12,10 +12,12 @@
     --body-bg: hsl(235, 21%, 11%);
     --btn-image: url(images/icon-sun.svg);
     --todo-bg: hsl(235, 24%, 19%);
+    --color-empty: white;
     --color-task: hsl(234, 39%, 85%);
     --color-main: hsl(234, 11%, 52%);
     --border-color: hsl(233, 14%, 35%);
     --btn-active: hsl(220, 98%, 61%);
+    --btn-hover: white;
 }
 
 .theme-light {
@@ -24,10 +26,12 @@
     --body-bg: hsl(260, 11%, 95%);
     --btn-image: url(images/icon-moon.svg);
     --todo-bg: rgb(255, 255, 255);
+    --color-empty: hsl(235, 21%, 11%);
     --color-task: hsl(235, 19%, 35%);
     --color-main: hsl(236, 9%, 61%);
     --border-color: hsl(236, 33%, 92%);
     --btn-active: hsl(220, 98%, 61%);
+    --btn-hover: hsl(235, 21%, 11%);
 }
 
 body {
@@ -125,23 +129,40 @@ input:focus {
     -ms-appearance: none;
     -o-appearance: none;
     -moz-appearance: none;
-    border: 1px solid var(--color-main);
-    border-radius: 50%;
-    outline: none;
-    transition-duration: 0.3s;
-    width: 24px;
-    height: 24px;
-    margin-right: 0.6rem;
-    cursor: pointer;
+    margin-right: 2rem;
 }
 
-.complete-check:checked {
-    background: no-repeat url(images/icon-check.svg), 
-    linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+.complete-check::before{
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    outline: none;
     cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border: 1px solid var(--color-main);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.complete-check::after{
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 1px solid var(--color-main);
+}
+
+.complete-check:checked::after {
+    background: no-repeat url(images/icon-check.svg) center/60%, linear-gradient(to bottom, #57ddff, #c058f3);
 }
 
 .delete-task {
@@ -155,15 +176,25 @@ input:focus {
 }
 
 #tasks-empty {
-    color: white;
+    color: var(--color-empty);
     text-align: center;
     justify-content: center;
+}
+
+.tasks-container {
+    background: blueviolet;
 }
 
 .todo-task {
     padding: 0 1rem;
     border-bottom: 1px solid var(--border-color);
     color: var(--color-task);
+    position: relative;
+    cursor: move;
+}
+
+.todo-task.dragging {
+    opacity: 0.5;
 }
 
 .mobile-panel {
@@ -213,7 +244,7 @@ input:focus {
 }
 
 .btn-options:hover {
-    color: white;
+    color: var(--btn-hover);
 }
 
 .btn-options.active {
@@ -222,17 +253,20 @@ input:focus {
 
 #tip {
     color: var(--color-main);
-    margin: 75px auto 0;
+    margin: 75px auto;
     text-align: center;
 }
 
 .attribution { 
-    font-size: 11px; 
-    text-align: center; 
+    font-size: 14px; 
+    text-align: center;
+    color: var(--color-main);
+    margin-bottom: 50px;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    font-size: 14px;
+    color: hsl(228, 76%, 64%); 
 }
 
 @media screen and (min-width: 768px) {
