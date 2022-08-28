@@ -1,0 +1,246 @@
+body {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+    margin: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+main {
+    max-width: 375px;
+    width: 100%;
+    margin: 40px auto;
+    display: grid;
+    gap: 1rem;
+}
+
+#header {
+    display: grid;
+    border-radius: 12px;
+    background-color:hsl(235, 46%, 20%)
+}
+
+#bio {
+    background-color: hsl(246, 80%, 60%);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#bio img {
+    max-width: 75px;
+    max-height: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+#bio p {
+    font-weight: 300;
+}
+
+#bio h1 {
+    font-weight: 400;
+}
+
+#timeline {
+    background-color: hsl(235, 46%, 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+#timeline p {
+    font-size: 18px;
+    font-weight: 400;
+    color: hsl(236, 100%, 87%);
+    cursor: pointer;
+}
+
+#timeline .active, #timeline p:hover {
+    color: white;
+}
+
+#cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.card-header {
+    height: 4rem;
+    border-radius: 12px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.card-header img {
+    z-index: -2;
+    position: absolute;
+    right: 20px;
+    width: 4rem;
+}
+
+.card-content {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 12px;
+    width: 100%;
+    padding: 2rem 1rem;
+    margin-top: -20px;
+}
+
+.card-desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-count {
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+}
+
+.previous-count {
+    color: hsl(236, 100%, 87%);
+}
+
+#work-card > .card-header {
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play-card > .card-header {
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study-card > .card-header {
+    background-color: hsl(348, 100%, 68%);
+}
+
+#run-card > .card-header {
+    background-color: hsl(145, 58%, 55%);
+}
+
+#chat-card > .card-header {
+    background-color: hsl(264, 64%, 52%);
+}
+
+#heal-card > .card-header {
+    background-color: hsl(43, 84%, 65%);
+}
+
+footer { 
+    font-size: 14px; text-align: center; 
+    color: white;
+    margin: 30px auto;
+}
+
+footer a { 
+    color: hsl(43, 84%, 65%);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1040px) {
+
+    body {
+        min-height: 100vh;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: 1040px;
+        place-items: center;
+        grid-template-columns: 1fr 3fr;
+        margin: 0;
+        gap: 20px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+    #header {
+        height: 100%;
+        width: 100%;
+    }
+
+    #bio {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    #bio h1 {
+        margin-top: 10px;
+        font-size: 3rem;
+    }
+
+    #timeline {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 20px;
+    }
+
+    .card-content {
+        padding: 2rem;
+    }
+
+    .card-data {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .current-count {
+        font-size: 50px;
+    }
+    
+}

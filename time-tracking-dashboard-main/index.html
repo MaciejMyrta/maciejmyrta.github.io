@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main>
+    <section id="header">
+      <div id="bio">
+        <div id="photo">
+          <img src="images/image-jeremy.png" alt="">
+        </div>
+        <div id="name">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <div id="timeline">
+        <p id="daily" class="range">Daily</p>
+        <p id="weekly" class="range active">Weekly</p>
+        <p id="monthly" class="range">Monthly</p>
+      </div>
+    </section>
+    <section id="cards">
+      <div id="work-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-work.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Work</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+      <div id="play-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-play.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Play</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+      <div id="study-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-study.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Study</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+      <div id="run-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-exercise.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Exercise</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+      <div id="chat-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-social.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Social</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+      <div id="heal-card" class="card">
+        <div class="card-header">
+          <img src="./images/icon-self-care.svg" alt="">
+        </div>
+        <div class="card-content">
+          <div class="card-desc">
+            <h4>Self Care</h4>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="card-data">
+            <h2 class="current-count"><span class="current-span"></span> hrs</h2>
+            <p class="previous-count">Last <span class="time-span"></span> - <span class="previous-span"></span> hrs</p>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/maciej-myrta-973a5819a/">Maciej Myrta</a>.
+    </div>
+  </footer>  
+</body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="file.js"></script>
+<script type="text/javascript" src="data.json"></script>
+</html>

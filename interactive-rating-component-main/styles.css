@@ -1,0 +1,132 @@
+body {
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+.panel {
+    background-color: hsl(213, 19%, 18%);
+    width: 90%;
+    max-width: 375px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p {
+    font-size: 15px;
+}
+
+.text-header {
+    color: hsl(0, 0%, 100%);
+}
+
+.description {
+    color: hsl(216, 12%, 54%);
+}
+
+.circle {
+    background-color: hsl(213, 19%, 23%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(217, 12%, 63%);
+}
+
+.grade {
+    display: none;
+}
+
+.ratings-div {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+.ratings-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.submit-button-box input {
+    width: 100%;
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: hsl(0, 0%, 100%);
+    padding: 0.7rem;
+}
+
+.submit-button-box input:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.number {
+    transition: all 0.5s;
+}
+
+.number:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.active {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.thanks {
+    display: none;
+    text-align: center;
+}
+
+.thanks-img {
+    display: flex;
+    justify-content: center;
+}
+
+.grade-info {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 23%);
+    width: max-content;
+    padding: 8px;
+    border-radius: 15px;
+    margin: 1.5rem auto 1.8rem
+}
+
+.grade-info  p {
+    margin: 0;
+}
+
+.attribution { 
+    font-size: 14px; text-align: center; 
+    color: white;
+    position: absolute;
+    bottom: calc(100vh - 75%);
+    width: 100%;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(25, 97%, 53%);
+    text-decoration: none;
+}

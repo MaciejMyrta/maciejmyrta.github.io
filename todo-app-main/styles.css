@@ -57,6 +57,7 @@ header {
 
 #header-title {
     font-size: 26px;
+    text-transform: uppercase;
     color: white;
     letter-spacing: 0.6rem;
     align-self: center;
