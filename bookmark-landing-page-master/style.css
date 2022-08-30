@@ -85,7 +85,7 @@ hr {
     font-weight: 400;
 }
 
-.navbar-desktop a:hover {
+.navbar-desktop > a:hover {
     color: black;
 }
 
@@ -134,9 +134,10 @@ hr {
     max-width: 750px;
 }
 
-button {
+.red-box, .blue-box, .grey-box {
     transition: all 0.3s ease-out;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .login-mobile {
@@ -152,7 +153,7 @@ button {
     transform:scale(1.05);
 }
 
-.red-button {
+.red-box {
     background-color: var(--soft-red);
     color: white;
     font-weight: 500;
@@ -160,7 +161,7 @@ button {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.red-button:hover {
+.red-box:hover {
     background-color: rgb(218, 45, 45);
     cursor: pointer;
 }
@@ -175,42 +176,42 @@ button {
     color: white;
 }
 
-.blue-button, .grey-button {
+.blue-box, .grey-box {
     border-radius: 5px;
     padding: 0.7rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.blue-button {
+.blue-box {
     background-color: var(--soft-blue);
     border: 1px solid var(--soft-blue);
 }
 
-.blue-button:hover {
+.blue-box:hover {
     background-color: white;
     border: 1px solid var(--soft-blue);
 }
 
-.blue-button a {
+.blue-box a {
     color: white;
     font-size: 16px;
 }
 
-.blue-button:hover a {
+.blue-box:hover a {
     color: var(--soft-blue);
 }
 
-.grey-button {
+.grey-box {
     background-color: var(--light-gray);
     border: 1px solid var(--light-gray);
 }
 
-.grey-button:hover {
+.grey-box:hover {
     background-color: white;
     border: 1px solid var(--dark-blue);
 }
 
-.grey-button a {
+.grey-box a {
     color: var(--dark-blue);
     font-size: 16px;
 }
@@ -229,14 +230,14 @@ button {
     text-align: center;
 }
 
-.bookmark-manager-buttons {
+.bookmark-manager-boxes {
     margin: 2.5rem auto 0;
     max-width: 380px;
     display: flex;
     justify-content: space-between;
 }
 
-.bookmark-manager-buttons > button {
+.bookmark-manager-boxes > div {
     width: 180px;
 }
 
@@ -311,7 +312,7 @@ button {
     margin-bottom: 6rem;
 }
 
-.feature-content > .blue-button {
+.feature-content > .blue-box {
     display: none;
 }
 
@@ -349,8 +350,12 @@ button {
     box-shadow: rgba(82,102,223,0.2) 0px 10px 15px -3px, rgba(82,102,223,0.1) 0px 4px 6px -2px;
 }
 
-.extension-button {
-    margin-top: 1rem;
+.dots {
+    width: 100%;
+}
+
+.extension-box {
+    margin: 1rem auto 0;
     width: 85%;
 }
 
@@ -358,6 +363,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 }
 
 .acc-arrow {
@@ -385,9 +391,10 @@ button {
     max-width: 650px;
 }
 
-.faq > .blue-button {
+.faq > .blue-box {
     margin: 3rem auto 7rem;
     padding: 0.8rem 1.6rem;
+    width: fit-content;
 }
 
 .faq-intro {
@@ -420,7 +427,7 @@ button {
     border: none;
 }
 
-.sub-form button {
+.sub-form > .red-box {
     padding: 0.8rem;
     border-radius: 10px;
 }
@@ -437,7 +444,7 @@ button {
     font-size: 24px;
 }
 
-.footer {
+footer {
     display: flex;
     flex-direction: column;
     background-color: var(--dark-blue);
@@ -521,11 +528,11 @@ button {
         width: 400px;
     }
 
-    .sub-form button {
+    .sub-form > .red-box {
         padding: 0.8rem 1.5rem;
     }
 
-    .footer {
+    footer {
         flex-direction: row;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -583,7 +590,7 @@ button {
         font-size: 22px;
     }
 
-    .bookmark-manager-buttons {
+    .bookmark-manager-boxes {
         margin: 2.5rem 0 0;
     }
 
@@ -667,8 +674,9 @@ button {
         bottom: -3rem;
     }
 
-    .feature-content > .blue-button {
+    .feature-content > .blue-box {
         display: block;
+        width: fit-content;
     }
 
     .extensions-text {
@@ -703,7 +711,7 @@ button {
         font-size: 18px;
     }
 
-    .footer {
+    footer {
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -769,7 +777,7 @@ button {
         margin: 3rem auto;
     }
 
-    .footer {
+    footer {
         padding-left: 9rem;
         padding-right: 9rem;
     }
