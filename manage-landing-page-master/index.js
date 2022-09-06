@@ -1,8 +1,8 @@
 const navbarMenu = document.querySelector('.navbar-menu');
 const iconHamburger = document.getElementById('icon-hamburger');
 const iconClose = document.getElementById('icon-close');
-const sliderButtons = document.querySelector('.slider-buttons')
-const peopleChoices = document.querySelectorAll('.slider-buttons > input');
+const sliderButtons = document.querySelector('.slider-boxes')
+const peopleChoices = document.querySelectorAll('.slider-boxes > input');
 const people = document.querySelectorAll('.person');
 
 iconHamburger.addEventListener('click', () => {
@@ -18,7 +18,7 @@ iconClose.addEventListener('click', () => {
 });
 
 const mobileDisplayCheckedPerson = () => {
-    const inputChecked = document.querySelector('.slider-buttons > input:checked');
+    const inputChecked = document.querySelector('.slider-boxes > input:checked');
     document.getElementById(`person-${inputChecked.value}`).style.display = 'block';
 }
 
