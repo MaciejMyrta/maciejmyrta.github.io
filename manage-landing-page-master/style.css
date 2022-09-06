@@ -38,32 +38,36 @@ a {
     cursor: pointer;
 }
 
-.orange-box, .white-box, button {
+.orange-box, .white-box, .submit-box {
     border-radius: 2.5rem;
     padding: 1rem 2rem;
     width: fit-content;
     margin: auto;
 }
 
-.orange-box, button {
+.orange-box, .submit-box {
     background-color: var(--bright-red);
     border: var(--bright-red);
     box-shadow: rgba(235, 73, 9, 0.35) 0px 5px 15px;
 }
 
-.orange-box a, button a {
+.orange-box a, .submit-box {
     color: var(--light-gray);
     font-weight: 500;
 }
 
-.orange-box:hover, button:hover {
+.orange-box:hover, .submit-box:hover {
     transform:scale(1.05);
     background-color: hsl(12, 93%, 55%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.submit-box:hover {
+    cursor: pointer;
+}
+
 .white-box {
-    z-index: 2;
+    z-index: 999;
     background-color: var(--light-gray);
     border: var(--light-gray);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -326,7 +330,7 @@ input[type="radio"]:checked {
     margin-right: 0.5rem;
 }
 
-.update-form > button {
+.update-form > .submit-box {
     margin: 0;
 }
 
